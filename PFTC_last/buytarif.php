@@ -37,7 +37,7 @@ if (isset($_COOKIE['jwt']))
     // $user_id_query = pg_query($db_connection,"SELECT * FROM users WHERE  email = '$emailcook'");
     //echo $user_id;
 
-    $cost_query = pg_query($db_connection,"SELECT costs FROM tariffs WHERE id = '$type_id'");
+    $cost_query = pg_query($db_connection,"SELECT costs FROM tariffs WHERE idtarif = '$type_id'");
     $cost_result = pg_fetch_assoc($cost_query);
     $cost = $cost_result['costs'];   
 
